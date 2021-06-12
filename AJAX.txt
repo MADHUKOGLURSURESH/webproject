@@ -1,0 +1,100 @@
+				
+					J QUERY
+AJAX methods are used to request data from the server with an http get or post request.
+get method request the data from a specified resource.
+post method submits data to be processed to a specified resource.
+get method may return cache data 
+post method never return cache data
+
+
+THe requird url parameter specifies the url you wish to request the, optional call  back parameter is the name of the function to be executed if the request 
+ex
+
+	<html>
+		<head>
+			<script>
+				$(document).ready(function()
+									{
+										$("button").click(function()
+															{
+																$.get("test.asp",
+																		function(data,status)
+																		{
+																			alert("data"+data+"\nstatus"+status)
+																			});
+																			});
+										});
+</script>
+</head>
+<body>
+
+
+<button>send an http get request to a page and get the result back</button>
+</body>
+</html>
+
+
+
+test.asp
+<% 
+response.write("This is some text from external asp file")
+%>
+
+
+$.post method request data  from the server using an http page
+
+syntax
+	
+	
+	the required parameter specifies the url you wish to request 
+	the optional data parameter specifies some data to send along the request
+	the optional call back parameter us the name of the functon to be executed if the request succeds
+	
+	example 
+	$get method to sends adata along with the request
+	
+	
+
+	<html>
+		<head>
+			<script>
+				$(document).ready(function()
+									{
+										$("button").click(function()
+															{
+																$.get("test.asp",<---------------------------{name:"abc";city:"shimoga";
+																										}
+																		function(data,status)
+																		{
+																			alert("data"+data+"\nstatus"+status)
+																			});
+																			});
+										});
+</script>
+</head>
+<body>
+
+
+<button>send an http get request to a page and get the result back</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
