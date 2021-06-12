@@ -1,2 +1,2 @@
 # webproject
-PLacement Managment System
+Placement Database Managment System
